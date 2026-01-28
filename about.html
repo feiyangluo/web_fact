@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Call Factus</title>
+    <style>
+        /* --- Reset & Base Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            /* Matches Home Page Background */
+            background: radial-gradient(circle at center, #1a3a6c 0%, #020c1b 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* --- Navigation --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 60px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: #4da6ff; 
+            text-shadow: 0 0 15px rgba(77, 166, 255, 0.4);
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #a0a0a0;
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        /* Active state for About link */
+        .nav-links a:hover, .nav-links a.active {
+            color: #ffffff;
+        }
+
+        /* --- About Content --- */
+        .content-container {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 40px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 30px;
+        }
+
+        .tech-accent {
+            color: #4da6ff;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #d0d0d0;
+            margin-bottom: 24px;
+        }
+
+        .mission-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            margin-top: 40px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            nav { padding: 20px; }
+            .nav-links { display: none; }
+            h1 { font-size: 2.5rem; }
+            .content-container { margin: 20px auto; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo" onclick="window.location.href='index.html'">Call Factus</div>
+        
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+        </div>
+    </nav>
+
+    <div class="content-container">
+        <h1>Democratizing <br><span class="tech-accent">Legal Access.</span></h1>
+        
+        <p>
+            The legal system is complex, expensive, and often inaccessible. Factus was built to change that. 
+            We leverage cutting-edge artificial intelligence to provide instant, accurate preliminary legal guidance 
+            to anyone, anywhere.
+        </p>
+        
+        <p>
+            Our AI models are trained on vast repositories of case law and statutes, allowing us to interpret 
+            your questions and provide clear, actionable information in seconds—not weeks.
+        </p>
+
+        <div class="mission-box">
+            <h2>Our Promise</h2>
+            <p style="margin-bottom: 0;">
+                We believe that understanding your rights shouldn't cost a fortune. 
+                Whether you are dealing with a contract dispute or a traffic violation, 
+                Factus is your 24/7 partner in navigating the complexities of the law.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
